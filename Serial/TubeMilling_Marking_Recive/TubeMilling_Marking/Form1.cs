@@ -31,6 +31,13 @@ namespace Milling_Marking
         const byte NAK = (byte)0x15;
         const byte ESC = (byte)0x1B;
 
+        const byte AT = (byte)0x40; //@
+        const byte SEMICOLON = (byte)0x3B; //;
+        const byte G = (byte)0x47; //G
+        const byte ONE = (byte)0x31; //1
+
+
+
         MarkingSocket.MarkingSocket MS = new MarkingSocket.MarkingSocket();
 
         public ArrayList arrSerialbuff = new ArrayList();
@@ -88,20 +95,23 @@ namespace Milling_Marking
         private void Send_Data(string Result)
         {
             string strMarking = string.Empty;
-            string FOLDER_FILENAME = "02" + ":" + "23";
+            //string FOLDER_FILENAME = "02" + ":" + "23";
             //string strMarking = (char)STX + str2hex(FOLDER_FILENAME) + (char)ETX + (char)STX + str2hex(textBox1.Text) + (char)SOH + (char)SO + (char)BEL;
-            if (Result == "S")
-            {
-                strMarking = (char)STX + FOLDER_FILENAME + (char)ETX + (char)STX + textBox1.Text + " " + (char)SOH + (char)SI + (char)BEL;
-            }
-            else
-            {
-                strMarking = (char)STX + FOLDER_FILENAME + (char)ETX + (char)STX + textBox1.Text + " " + (char)SOH + (char)SO + (char)EOT;
-            }
+
+            strMarking = (char)ESC + "@" + (char)SEMICOLON;                                   //메모리 초기화
+            strMarking = strMarking + (char)ESC + "G1" + (char)SEMICOLON;                     //마킹타입
+            strMarking = strMarking + (char)ESC + "H0" + (char)SEMICOLON;                     //폰트타입
+            strMarking = strMarking + (char)ESC + "I300" + (char)SEMICOLON;                   //X축좌표
+            strMarking = strMarking + (char)ESC + "J300" + (char)SEMICOLON;                   //Y축좌표
+            strMarking = strMarking + (char)ESC + "L000" + (char)SEMICOLON;                   //마킹각도타입
+            strMarking = strMarking + (char)ESC + "M030" + (char)SEMICOLON;                   //문자간격
+            strMarking = strMarking + (char)ESC + "O030" + (char)SEMICOLON;                   //문자높이
+            strMarking = strMarking + (char)ESC + "?U" + textBox1.Text + (char)SEMICOLON;     //폰트타입
+            strMarking = strMarking + (char)ESC + "!" + (char)SEMICOLON;                      //Start     
 
             byte[] sdata = ASCIIEncoding.ASCII.GetBytes(strMarking);
 
-            //ListAdd(sdata);
+            ListAdd(sdata);
 
             this.SendSerialComm(sdata, sdata.Length); 
         }
@@ -163,10 +173,10 @@ namespace Milling_Marking
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show(LotID + "를 마킹하시겠습니까?", "Milling Marking", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show(LotID + "를 마킹하시겠습니까?", "TubeMilling Marking", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Send_Data("L");
+                    //Send_Data("L");
                 }
             }
         }
