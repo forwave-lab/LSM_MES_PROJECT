@@ -1,0 +1,8 @@
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\bin\Debug\capture.exe
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\bin\Debug\capture.pdb
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.Form1.resources
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.Properties.Resources.resources
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.csproj.GenerateResource.Cache
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.exe
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.pdb
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\capture\capture\capture\obj\x86\Debug\capture.exe.licenses

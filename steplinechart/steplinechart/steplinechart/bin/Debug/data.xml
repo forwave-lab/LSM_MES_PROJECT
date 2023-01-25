@@ -1,0 +1,62 @@
+<SOAP-ENV:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:clr="http://schemas.microsoft.com/soap/encoding/clr/1.0" SOAP-ENV:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+<SOAP-ENV:Body>
+<a1:ObjectStreamer id="ref-1" xmlns:a1="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics.Win.UltraDataSource">
+<ObjectStreamerAssemblyName id="ref-4">Infragistics.Win.UltraDataSource</ObjectStreamerAssemblyName>
+<Rows href="#ref-5"/>
+<Band href="#ref-6"/>
+</a1:ObjectStreamer>
+<a2:UltraDataRootRowsCollection id="ref-5" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<_x0030_ href="#ref-7"/>
+<_x0031_ href="#ref-8"/>
+<_x0032_ href="#ref-9"/>
+<_x0033_ href="#ref-10"/>
+</a2:UltraDataRootRowsCollection>
+<a2:UltraDataRootBand id="ref-6" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Columns href="#ref-11"/>
+<Key id="ref-12">Band 0</Key>
+</a2:UltraDataRootBand>
+<a2:UltraDataRow id="ref-7" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Column_Key_time xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-14" xsi:type="SOAP-ENC:string">0700</objectValue>
+</Column_Key_time>
+<Column_Key_heat xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-15" xsi:type="SOAP-ENC:string">100</objectValue>
+</Column_Key_heat>
+</a2:UltraDataRow>
+<a2:UltraDataRow id="ref-8" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Column_Key_time xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-16" xsi:type="SOAP-ENC:string">0710</objectValue>
+</Column_Key_time>
+<Column_Key_heat xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-17" xsi:type="SOAP-ENC:string">150</objectValue>
+</Column_Key_heat>
+</a2:UltraDataRow>
+<a2:UltraDataRow id="ref-9" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Column_Key_time xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-18" xsi:type="SOAP-ENC:string">0720</objectValue>
+</Column_Key_time>
+<Column_Key_heat xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-19" xsi:type="SOAP-ENC:string">160</objectValue>
+</Column_Key_heat>
+</a2:UltraDataRow>
+<a2:UltraDataRow id="ref-10" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Column_Key_time xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-20" xsi:type="SOAP-ENC:string">073.</objectValue>
+</Column_Key_time>
+<Column_Key_heat xsi:type="a3:ObjectWrapper" xmlns:a3="http://schemas.microsoft.com/clr/nsassem/Infragistics.Shared.Serialization/Infragistics4.Shared.v14.2">
+<objectValue id="ref-21" xsi:type="SOAP-ENC:string">200</objectValue>
+</Column_Key_heat>
+</a2:UltraDataRow>
+<a2:UltraDataColumnsCollection id="ref-11" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Count>2</Count>
+<_x0030_ href="#ref-22"/>
+<_x0031_ href="#ref-23"/>
+</a2:UltraDataColumnsCollection>
+<a2:UltraDataColumn id="ref-22" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Key id="ref-24">time</Key>
+</a2:UltraDataColumn>
+<a2:UltraDataColumn id="ref-23" xmlns:a2="http://schemas.microsoft.com/clr/nsassem/Infragistics.Win.UltraWinDataSource/Infragistics4.Win.UltraWinDataSource.v14.2">
+<Key id="ref-25">heat</Key>
+</a2:UltraDataColumn>
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
