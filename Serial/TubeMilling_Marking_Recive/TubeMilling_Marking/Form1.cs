@@ -33,8 +33,6 @@ namespace Milling_Marking
 
         const byte AT = (byte)0x40; //@
         const byte SEMICOLON = (byte)0x3B; //;
-        const byte G = (byte)0x47; //G
-        const byte ONE = (byte)0x31; //1
 
 
 
