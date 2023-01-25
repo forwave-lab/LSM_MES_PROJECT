@@ -1,0 +1,313 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Infragistics4.Win.Portable.Core.v14.2</name>
+    </assembly>
+    <members>
+        <member name="T:Infragistics.Portable.Runtime.EmitIgnoreAttribute">
+            <summary>
+            Members marked with this attribute will not emit their code, but a ClientName attribute will still be honored by references to point to another entity. 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.JAVAEmitIgnoreAttribute">
+            <summary>
+            Members marked with this attribute will not emit their code, but a ClientName attribute will still be honored by references to point to another entity. 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.OBJCEmitIgnoreAttribute">
+            <summary>
+            Members marked with this attribute will not emit their code, but a ClientName attribute will still be honored by references to point to another entity. 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.JSEmitIgnoreAttribute">
+            <summary>
+            Members marked with this attribute will not emit their code, but a ClientName attribute will still be honored by references to point to another entity. 
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:Infragistics.Portable.Runtime.EmitIgnoreTypeAttribute" -->
+        <!-- Badly formed XML comment ignored for member "T:Infragistics.Portable.Runtime.JAVAEmitIgnoreTypeAttribute" -->
+        <!-- Badly formed XML comment ignored for member "T:Infragistics.Portable.Runtime.OBJCEmitIgnoreTypeAttribute" -->
+        <!-- Badly formed XML comment ignored for member "T:Infragistics.Portable.Runtime.JSEmitIgnoreTypeAttribute" -->
+        <member name="T:Infragistics.Portable.Runtime.LiteralStringAttribute">
+            <summary>
+            if a method is marked with this attribute, the method parameter to this method  will be emitted as pure string literal 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.JAVALiteralStringAttribute">
+            <summary>
+            if a method is marked with this attribute, the method parameter to this method  will be emitted as pure string literal 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.JSLiteralStringAttribute">
+            <summary>
+            if a method is marked with this attribute, the method parameter to this method  will be emitted as pure string literal 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.OBJCLiteralStringAttribute">
+            <summary>
+            if a method is marked with this attribute, the method parameter to this method  will be emitted as pure string literal 
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamSuppressWidgetMemberAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamSuppressWidgetMemberAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamiOSSuppressWidgetMemberAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamiOSSuppressWidgetMemberAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamAndroidSuppressWidgetMemberAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamAndroidSuppressWidgetMemberAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamWPSuppressWidgetMemberAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamWPSuppressWidgetMemberAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamiOSTreatAsDoubleAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamiOSTreatAsDoubleAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamWrapperSuppressWidgetMemberAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamWrapperSuppressWidgetMemberAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamiOSTreatAsFloatAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamiOSTreatAsFloatAttribute.#ctor">
+            <summary>
+            SuppressWidgetMemberAttribute constructor.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.XamiOSEnumNameAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.XamiOSEnumNameAttribute.#ctor(System.String)">
+            <summary>
+            WidgetDefaultStringAttribute constructor.
+            </summary>
+            <param name="value">The widget default.</param>
+        </member>
+        <member name="P:Infragistics.Portable.Runtime.XamiOSEnumNameAttribute.Value">
+            <summary>
+            The widget default.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.WidgetIncludeDependsAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.WidgetIncludeDependsAttribute.#ctor(System.String)">
+            <summary>
+            WidgetIgnoreDependsAttribute constructor.
+            </summary>
+            <param name="name">The name of the dependency to ignore.</param>
+        </member>
+        <member name="P:Infragistics.Portable.Runtime.WidgetIncludeDependsAttribute.Name">
+            <summary>
+            The name of the dependency to ignore.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Runtime.WidgetModuleExclusionParentAttribute">
+            <summary>
+            Attribute used for cross-platform translation.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Runtime.WidgetModuleExclusionParentAttribute.#ctor(System.String)">
+            <summary>
+            WidgetModuleParentAttribute constructor.
+            </summary>
+            <param name="name">The name of the widget parent module.</param>
+        </member>
+        <member name="P:Infragistics.Portable.Runtime.WidgetModuleExclusionParentAttribute.Name">
+            <summary>
+            The name of the widget parent module.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Graphics.Media.DoubleCollection">
+            <summary>
+            Collection class for the System.Double data type.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.#ctor">
+            <summary>
+            Creates a new instance.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.#ctor(System.Double[])">
+            <summary>
+            Creates a new instance.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.DoubleCollectionTypeConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            Returns true for System.String.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.DoubleCollectionTypeConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Converts to System.String.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.DoubleCollectionTypeConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <summary>
+            CanConvertFrom
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.DoubleCollection.DoubleCollectionTypeConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            ConvertFrom
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Graphics.Media.FillRule">
+            <summary>
+            Specifies how the intersecting areas of System.Windows.Media.PathFigure objects
+            contained in a System.Windows.Media.Geometry are combined to form the area
+            of the System.Windows.Media.Geometry.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Portable.Graphics.Media.FillRule.EvenOdd">
+            <summary>Rule that determines whether a point is in the fill region by drawing a ray
+            from that point to infinity in any direction and counting the number of path
+            segments within the given shape that the ray crosses. If this number is odd,
+            the point is inside; if even, the point is outside.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Portable.Graphics.Media.FillRule.Nonzero">
+            <summary>
+            Rule that determines whether a point is in the fill region of the path by
+            drawing a ray from that point to infinity in any direction and then examining
+            the places where a segment of the shape crosses the ray. Starting with a
+            count of 0, add one each time a segment crosses the ray from left to right
+            and subtract one each time a path segment crosses the ray from right to left.
+            After counting the crossings, if the result is 0 then the point is outside
+            the path. Otherwise, it is inside.
+            </summary>
+        </member>
+        <member name="P:Infragistics.Portable.Graphics.Media.GeometryGroup.FillRule">
+            <summary>
+            Gets or sets how the intersecting areas of the objects contained in this System.Windows.Media.GeometryGroup are combined.
+            </summary>
+        </member>
+        <member name="T:Infragistics.Portable.Components.UI.Visibility">
+            <summary>
+            Specifies the display state of an element.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Portable.Components.UI.Visibility.Visible">
+            <summary>
+            Display the element.
+            </summary>
+        </member>
+        <member name="F:Infragistics.Portable.Components.UI.Visibility.Collapsed">
+            <summary>
+            Do not display the element.
+            </summary>
+        </member>
+        <member name="T:Infragistics.AssemblyVersion">
+            <summary>
+            An object that provides information useful for setting up information for the Assembly.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.CompanyName">
+            <summary>
+            Assembly company name
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.EndCopyrightYear">
+            <summary>
+            The End Copyright year.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.SatelliteContractVersion">
+            <summary>
+            The SatelliteContractVersion
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.MajorMinor">
+            <summary>
+            The Major and Minor build number of the assembly, such as 9.1
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.Build">
+            <summary>
+            The Build Number of the assembly, such as 20091
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.Revision">
+            <summary>
+            The Revision of the Assembly.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.Version">
+            <summary>
+            The full version of the Assembly.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.Configuration">
+            <summary>
+            The current build configuration for the assembly.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.AssemblyNamePrefix">
+            <summary>
+            The prefix of all assembly names in the product.
+            </summary>
+        </member>
+        <member name="F:Infragistics.AssemblyVersion.AssemblyNameSuffix">
+            <summary>
+            The suffix of all assembly names in the product.
+            </summary>
+        </member>
+        <member name="M:Infragistics.Portable.Graphics.Media.Color.op_Implicit(System.Drawing.Color)~Infragistics.Portable.Graphics.Media.Color">
+            <summary>
+            Allows a new Infragistics.Portable.Graphics.Media instance to be created
+            from an existing System.Drawing.Color instance.
+            </summary>
+            <param name="color">The System.Drawing.Color instance from which to initialize an Infragistics.Portable.Graphics.Media instance.</param>
+            <returns>An Infragistics.Portable.Graphics.Media instance.</returns>
+        </member>
+    </members>
+</doc>
