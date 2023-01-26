@@ -13,7 +13,7 @@ namespace Milling_Marking
 {
     public partial class Form1 : Form
     {
-        public const string Port = "COM1";
+        public string Port = "COM1";
         public const string Baud = "9600";
         public const string Databits = "8";
         public const string Parity = "None";
@@ -52,12 +52,18 @@ namespace Milling_Marking
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            string[] comlist = System.IO.Ports.SerialPort.GetPortNames();
 
+            if (comlist.Length > 0)
+            {
+                comboBox1.Items.AddRange(comlist);
+                comboBox1.SelectedIndex = 0;
+            }
         }
 
         private void Serial_Open(object sender, EventArgs e)
         {
-            this.label1.Text = this.Comport_Open(Port, Baud, Databits, Parity, Stop);       
+            this.label1.Text = this.Comport_Open(comboBox1.Text, Baud, Databits, Parity, Stop);       
         }
 
         private void Serial_Close(object sender, EventArgs e)
@@ -68,33 +74,31 @@ namespace Milling_Marking
 
         private void Serial_Send(object sender, EventArgs e)
         {
-            //string FOLDER_FILENAME = "02" + ":" + "23";
-            ////string strMarking = (char)STX + str2hex(FOLDER_FILENAME) + (char)ETX + (char)STX + str2hex(textBox1.Text) + (char)SOH + (char)SO + (char)BEL;// + (char)ETX
-            //string strMarking = (char)STX + FOLDER_FILENAME + (char)ETX + (char)STX + textBox1.Text + " " + (char)SOH + (char)SI + (char)BEL;// + (char)ETX
-
-            //byte[] sdata = ASCIIEncoding.ASCII.GetBytes(strMarking);
-
-            //ListAdd(sdata);
-            
-            //this.SendSerialComm(sdata, sdata.Length);
             string Result = string.Empty;
-            Result = this.Comport_Open(Port, Baud, Databits, Parity, Stop);
-            if (Result == "Fail")
+
+            if(sp.IsOpen)
             {
-                Serial_Port_Close();
+                Send_Data("S");
             }
             else
             {
+                Result = this.Comport_Open(comboBox1.Text, Baud, Databits, Parity, Stop);
+                this.label1.Text = Result;
 
-                Send_Data("S");
+                if (Result == "Fail")
+                {
+                    Serial_Port_Close();
+                }
+                else
+                {
+                    Send_Data("S");
+                }
             }
         }
 
         private void Send_Data(string Result)
         {
             string strMarking = string.Empty;
-            //string FOLDER_FILENAME = "02" + ":" + "23";
-            //string strMarking = (char)STX + str2hex(FOLDER_FILENAME) + (char)ETX + (char)STX + str2hex(textBox1.Text) + (char)SOH + (char)SO + (char)BEL;
 
             strMarking = (char)ESC + "@" + (char)SEMICOLON;                                   //메모리 초기화
             strMarking = strMarking + (char)ESC + "G1" + (char)SEMICOLON;                     //마킹타입
@@ -228,7 +232,8 @@ namespace Milling_Marking
             }
             catch (Exception ex)
             {
-                throw ex;
+                return ex.Message;
+                //throw ex;
             }
         }
         #endregion
@@ -245,7 +250,8 @@ namespace Milling_Marking
                 }
                 else
                 {                    
-                    Result = this.Comport_Open(Port, Baud, Databits, Parity, Stop);
+                    Result = this.Comport_Open(comboBox1.Text, Baud, Databits, Parity, Stop);
+                    this.label1.Text = Result;
                     if (Result == "Fail")
                     {
                         Serial_Port_Close();
