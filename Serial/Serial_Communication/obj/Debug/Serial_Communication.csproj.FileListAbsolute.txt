@@ -1,0 +1,10 @@
+D:\My\my_visualstudio2019\Serial_Communication\bin\Debug\Serial_Communication.exe.config
+D:\My\my_visualstudio2019\Serial_Communication\bin\Debug\Serial_Communication.exe
+D:\My\my_visualstudio2019\Serial_Communication\bin\Debug\Serial_Communication.pdb
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.csprojAssemblyReference.cache
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.Form1.resources
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.Properties.Resources.resources
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.csproj.GenerateResource.cache
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.csproj.CoreCompileInputs.cache
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.exe
+D:\My\my_visualstudio2019\Serial_Communication\obj\Debug\Serial_Communication.pdb
