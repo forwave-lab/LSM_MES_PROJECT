@@ -19,6 +19,7 @@ using Infragistics.Documents.Reports.Report;
 using Infragistics.Documents.Reports.Report.Section;
 using Infragistics.Win.Printing;
 
+using Infragistics.UltraChart.Data;
 
 namespace capture
 {
@@ -284,6 +285,24 @@ namespace capture
 
             series1.DataBind();
             series2.DataBind();
+
+            //a();
+        }
+
+        private void a()
+        {
+            //GanttDataSource seriesA = new GanttDataSource();
+            //seriesA.Data.DataSource = HeatRecord;
+            //seriesA.Data.
+            //seriesA.Data.EndTimeColumn = "date3";
+            //seriesA.Data.StartTimeColumn = "date2";
+            //seriesA.Data.OwnerColumn = "date1";
+
+            //ultraChart3.Series.Add(seriesA);
+
+            //seriesA.DataBind();
+
+            ////seriesA.Data.DataSource = ganttData;            
         }
 
         private void ultraButton3_Click(object sender, EventArgs e)
@@ -305,6 +324,146 @@ namespace capture
             this.ultraChart1.DrawToBitmap(memoryImage, this.ultraChart1.ClientRectangle);
             //e.Graphics.DrawImage(memoryImage, 20, 20);
             e.Graphics.DrawImage(memoryImage, 20, 50, Convert.ToInt32(section.PageSize.Width) + 200, Convert.ToInt32(section.PageSize.Height) + 200);
+        }
+
+        private void ultraButton4_Click(object sender, EventArgs e)
+        {
+            //List<string> ExcelList = new List<string>();
+
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.DefaultExt = "Excel Files";
+                openFileDialog.Filter = "Excel Files |*.xls;*.xlsx";
+                openFileDialog.Multiselect = false;
+
+                string strFileDir = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                openFileDialog.InitialDirectory = strFileDir;
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        if (openFileDialog.SafeFileName.LastIndexOf(".") > -1)
+                        {
+                            Workbook workbook = new Workbook();
+                            workbook = Workbook.Load(openFileDialog.FileName);
+
+                            Worksheet worksheet = workbook.Worksheets[0];
+
+                            // DataTable HeatRecord = new DataTable("HeatRecord");
+
+                            int rowCount = 0;
+                            int columnCount = 0;
+
+                            foreach (WorksheetRow worksheetRow in worksheet.Rows)
+                            {
+                                if (rowCount == 0)
+                                {
+                                    //foreach (WorksheetCell worksheetCell in worksheetRow.Cells)
+                                    //{
+                                    //    string cellValue = worksheetCell.Value.ToString().Trim();
+                                    //    if (cellValue == string.Empty || cellValue == "$Date")
+                                    //    {
+                                    //        break;
+                                    //    }
+                                    //    else
+                                    //    {
+                                    //        //DataColumn dataColumn = HeatRecord.Columns.Add();
+                                    //        //dataColumn.ColumnName = cellValue;
+                                    //        //dataColumn.DataType = worksheet.Rows[rowCount + 1].Cells[columnCount].Value.GetType();
+                                    //    }
+                                    //    //columnCount++;
+                                    //}
+                                }
+                                else
+                                {
+                                    columnCount = 0;
+                                    DataRow HeatRecordRow = HeatRecord.NewRow();
+                                    foreach (WorksheetCell worksheetCell in worksheetRow.Cells)
+                                    {
+                                        if (worksheetCell.Value == null)
+                                        {
+                                            Excel_Read_Close = true;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            string cellValue = worksheet.Rows[rowCount].Cells[columnCount].Value.ToString().Trim();
+                                            if (rowCount == 1)
+                                            {
+                                                if (columnCount == 0)
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add("date1", typeof(string));
+                                                }
+                                                else if (columnCount == 1)
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add("date2", typeof(DateTime));
+                                                }
+                                                else if (columnCount == 2)
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add("date3", typeof(DateTime));
+                                                }
+                                                else if (columnCount == 3)
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add("value1", typeof(double));
+                                                }
+                                                else if (columnCount == 4)
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add("value2", typeof(double));
+                                                }
+                                                else
+                                                {
+                                                    DataColumn dataColumn = HeatRecord.Columns.Add();
+                                                }
+                                                //dataColumn.DataType = worksheet.Rows[rowCount + 1].Cells[columnCount].Value.GetType();
+                                                //dataColumn.ColumnName = cellValue;
+                                            }
+
+                                            if (columnCount == 0)
+                                            {
+                                                //HeatRecordRow[columnCount] = FromStringToDate(cellValue).ToString();
+                                                HeatRecordRow[columnCount] = cellValue;
+                                            }
+                                            else if (columnCount == 1)
+                                            {
+                                                HeatRecordRow[columnCount] = FromStringToTime(cellValue).ToString();
+                                            }
+                                            else if (columnCount == 2)
+                                            {
+                                                HeatRecordRow[columnCount] = FromStringToTime(cellValue).ToString();
+                                            }
+                                            else
+                                            {
+                                                HeatRecordRow[columnCount] = Math.Round(double.Parse(cellValue), 2);
+                                            }
+
+                                            columnCount++;
+                                        }
+                                    }
+                                    HeatRecord.Rows.Add(HeatRecordRow);
+                                }
+                                rowCount++;
+                                if (Excel_Read_Close == true)
+                                {
+                                    break;
+                                }
+                            }
+                            HeatRecord.AcceptChanges();
+
+                            // workbook.Worksheets[0].Rows[0].Cells[0].Value = 42;                            
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    ultraGrid1.DataSource = HeatRecord;
+                }
+            }
         }
     }
 }

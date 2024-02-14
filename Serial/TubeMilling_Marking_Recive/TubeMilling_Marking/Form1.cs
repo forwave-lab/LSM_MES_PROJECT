@@ -14,10 +14,16 @@ namespace Milling_Marking
     public partial class Form1 : Form
     {
         public string Port = "COM1";
-        public const string Baud = "9600";
+        //public const string Baud = "9600";
+        public const string Baud = "115200";
         public const string Databits = "8";
         public const string Parity = "None";
         public const string Stop = "One";
+
+        public string serialMsg;
+        int serialoffset = 0;
+        //string serialstartStr;
+        //string serialendStr;
 
         const byte STX = (byte)0x02;
         const byte ETX = (byte)0x03;
@@ -30,6 +36,14 @@ namespace Milling_Marking
         const byte ACK = (byte)0x06;
         const byte NAK = (byte)0x15;
         const byte ESC = (byte)0x1B;
+        const byte serialstartStr = (byte)0x58;
+        const byte serialendStr = (byte)0x0C;
+
+        const byte CR = (byte)0x0D;
+        const byte LP = (byte)0x0A;
+        const byte Zero = (byte)0x00;
+        const byte space = (byte)0x32;
+
 
         const byte AT = (byte)0x40; //@
         const byte SEMICOLON = (byte)0x3B; //;
@@ -122,6 +136,8 @@ namespace Milling_Marking
         private void Serial_Receive(string LotID)
         {
             string Msg = string.Empty;
+            MessageBox.Show(LotID);            
+            return;
 
             if (LotID == string.Empty)
             {
@@ -280,13 +296,60 @@ namespace Milling_Marking
                     LotID = string.Empty;
 
                     int nbyte = sp.BytesToRead;
-                    byte[] rbuff = new byte[nbyte];
+                    byte[] rbuff = new byte[4096];
+                    //변경
+                    //byte[] rbuff;
+                    if (serialoffset == 0)
+                    {
+                        //rbuff = new byte[4096];
+                    }
+                    string serialtostring;
+                    if (nbyte != 0)
+                    {
+                        sp.Read(rbuff, serialoffset, nbyte);
+                        serialoffset += nbyte;
+
+
+                        for (int i = 0; i < serialoffset; i++)
+                        {
+                            if(rbuff[i] != CR && rbuff[i] != LP && rbuff[i] != Zero && rbuff[i] != space)
+                            {
+                                serialMsg += Convert.ToChar(rbuff[i]);
+                            } 
+                        }
+                        
+                        //if (serialMsg.Contains((char)serialstartStr))
+                        //{
+                           //serialMsg = serialMsg.Substring(serialMsg.IndexOf((char)serialstartStr));
+                            if (serialMsg.Contains((char)serialendStr))
+                            {
+                                this.Serial_Receive(serialMsg);
+                                Console.WriteLine(serialMsg);
+                                serialoffset = 0;
+                                serialMsg = string.Empty;
+                        }
+                        //}
+                    }
+
+                    return;
+
+                    serialtostring = sp.ReadLine();                    
+                    MessageBox.Show(serialtostring);
+                    return;
+
+
+                    serialMsg = serialMsg + sp.ReadByte().ToString();
+
+
 
                     if (nbyte > 0)
                     {
                         sp.Read(rbuff, 0, nbyte);
+                        
+                        
                     }
 
+                    
                     for (int i = 0; i < nbyte; i++)
                     {
                         arrSerialbuff.Add(rbuff[i]);

@@ -1,0 +1,10 @@
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.csproj.AssemblyReference.cache
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.Form1.resources
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.Properties.Resources.resources
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.csproj.GenerateResource.cache
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.csproj.CoreCompileInputs.cache
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\bin\Debug\zpl_viewer.exe.config
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\bin\Debug\zpl_viewer.exe
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\bin\Debug\zpl_viewer.pdb
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.exe
+D:\01.bizentro\01.MES\99.site\01.ls메탈\프로젝트구현\400. 구현단계\Management_Source\Serial\zpl_viewer\zpl_viewer\obj\Debug\zpl_viewer.pdb
